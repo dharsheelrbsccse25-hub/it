@@ -1,0 +1,6 @@
+Git checkout -b newbranch 
+Write 
+Something like 
+Echo "hehe">f3.txt 
+Git add . 
+Git commit and push into new branch
