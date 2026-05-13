@@ -1,0 +1,89 @@
+1st or pushing into different branches
+cho "# practice" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/dharsheelrbsccse25-hub/practice.git
+git push -u origin main
+(Switching branches and pushing is done)
+
+
+.⁠ Cloning-------------------
+1. Open repository.
+2. Click on code button and copy url.
+3. open terminal and navigate to desired directory.
+4. >> git clone <url>
+5. Enter the repository...(cd repository name)
+Forking--------------------
+1. Open the Repository.
+2. On the top-right corner of the repository page- click Fork.
+3. Select Your Account.
+4.
+--Forked repo is created.
+
+
+Pull request
+1- Fork the Repository
+-------------------------------------------------------
+2- Clone the Forked Repo (Local Machine pe)
+git clone https://github.com/your-username/repo-name.git
+cd repo-name
+-------------------------------------------------------
+3- Upstream the Original Repo
+git remote add upstream <path of original repo owner>
+Check:
+git remote -v
+-------------
+To set different origin-
+git remote set-url origin <forked repo link>
+-------------------------------------------------------
+4- New Branch
+git checkout -b feature-update
+code .
+--open vs code
+-------------------------------------------------------
+5- Edit the code
+Check:
+git status
+-------------------------------------------------------
+6- Changes Stage + Commit
+git add .
+git commit -m "type a message here"
+-------------------------------------------------------
+7- Push it back tour fork
+git push origin feature-update
+---------
+Note- To remove origin and add a new origin, follow this-
+git remote remove origin
+git remote add origin <path of forked repo--https://github.com/rkjune/jwt
+auth
+_
+_
+forked.git>
+-------------------------------------------------------
+8- create Pull Request
+Open your forked repo in your github account
+click "Compare & pull request"
+Base repo: original repo
+Compare: your branch (feature-update)
+Type -Title aur description
+Create Pull Request
+-------------------------------------------------------
+9- Review & Merge (done by owner)
+# 1. Ensure you are on main and up to date
+git checkout main
+git pull origin main
+
+# 2. Create a temporary branch and make a change
+git checkout -b test-conflict
+echo "Change from branch" >> README.md
+git commit -am "Edit readme on branch"
+
+# 3. Switch back to main and make a conflicting change on the exact same line
+git checkout main
+echo "Change from main" >> README.md
+git commit -am "Edit readme on main"
+
+# 4. Try to merge the branch into main (This triggers the conflict)
+git merge test-conflict
